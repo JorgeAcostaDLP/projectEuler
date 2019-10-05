@@ -1,4 +1,4 @@
-
+//Code used in solving Project Euler problems
 //Project Euler problem 1: sum of all multiples up to limit
 const multipleSum = (mult1, mult2, limit) => {
     let sum = 0
