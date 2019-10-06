@@ -32,3 +32,27 @@ const fib = (n) => {
     }
     return evenFibNumbers.reduce((a,b)=>a+b,0)
   }
+
+  //Project Euler solution 3, largest prime factor of n
+function isPrime(n) 
+{
+    // Check if n is less than 2 => not prime
+    if (n<2) return false;
+    if(n===2) return true;
+    // Loop from 2 to square root of n
+    for (let i = 2; i <= Math.sqrt(n); i++) 
+        // If i is a divisor of n, n is not prime
+        if (n % i == 0) return false;
+
+    return true;
+}
+const largestPrimeFactor=(n)=> {
+  let currentLargest
+  for(let i=1; i <= n; i++) {
+    if(n%i === 0 && isPrime(i)) {
+      currentLargest = i
+      console.log(i)
+  }
+}
+  return currentLargest
+}
