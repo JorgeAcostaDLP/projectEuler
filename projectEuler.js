@@ -56,3 +56,24 @@ const largestPrimeFactor=(n)=> {
 }
   return currentLargest
 }
+
+
+//Project Euler Problem 4 Find largest three digit palindromic number
+const isPalindrome = (str) => {
+  for(i=0; i<str.length/2; i++) {
+    if(str[i]!==str[str.length-1-i]) return false
+  }
+  return true
+}
+
+const largesThreeDigitPalindromicNumber = () => {
+  let largest = []
+  for(let i=100; i<=999; i++){
+    for(let j=100; j<=999; j++){
+      curProduct = i*j
+      let stringedNumber = curProduct.toString()
+      if(isPalindrome(stringedNumber)) {
+        largest.push(i*j)
+      }  }}
+  return Math.max(...largest)
+}
