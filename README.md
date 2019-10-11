@@ -1,1 +1,1 @@
-# projectEuler
+# reactPractice
