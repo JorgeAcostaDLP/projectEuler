@@ -141,3 +141,21 @@ s = "3[a2[c]]", return "accaccacc".
 s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 
 Accepted
+
+// s = "3[a]2[bc]", return "aaabcbc".
+const isNum = (num)=>{
+  numbers = '0123456789'
+  if(numbers.indexOf(num)) return true
+  return
+}
+const decode = (str) => {
+  ans = ''
+  for(i=0; i<str.length; i++){
+
+    if(str[i]==='[') {
+      ans+=str[i+1].repeat(Number(str[i-1]))
+      i++
+    }
+  }
+  return ans
+}
